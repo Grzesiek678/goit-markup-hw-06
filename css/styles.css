@@ -679,6 +679,8 @@ section {
   border-radius: 4px;
   background-color: var(--white);
   position: relative;
+  padding: 40px;
+  display: block;
 }
 
 .b-m-c-svg {
@@ -689,145 +691,129 @@ section {
   right: 0;
 }
 
-.modal-title {
-  display: block;
-  color: #212121;
-  z-index: 6;
+.modal-head {
   font-weight: 700;
   font-size: 20px;
-  line-height: 23.44px;
-  padding-top: 40px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
 }
 
-.modal-content {
-  width: 528px;
-  height: 581px;
-}
-
-.form {
-  width: 528px;
-  height: 581px;
-}
-
-input {
-  outline: none;
-  border: none;
-}
-
-.text {
-  position: absolute;
-  width: 406px;
-  font-size: 16px;
-  height: 36px;
-  right: 0;
-  top: 0;
-}
-
-.fieldset {
-  height: 40px;
-  margin-top: 30px;
-  margin-left: 40px;
-  margin-right: 40px;
-  position: relative;
-  display: flex;
-  border-radius: 4px;
-  border-color: rgba(33, 33, 33, 0.2);
-}
-
-.label {
-  font-size: 14px;
+.modal-label {
+  display: block;
   font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
   color: #757575;
-  position: absolute;
-  top: -25px;
+  position: relative;
+  display: block;
 }
 
-.fieldset-comment {
-  height: 120px;
-  z-index: 6;
+.modal-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 40px;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  cursor: pointer;
 }
 
 .comment {
-  resize: inherit;
-  position: absolute;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  width: 444px;
-  height: 116px;
+  resize: none;
+  height: 120px;
   padding: 12px 16px;
 }
 
-.rodo {
+.regulamin-a {
   color: var(--lightblue);
 }
 
-.button-send {
+.regulamin {
+  max-width: 419px;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  line-height: 146%;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkboxborder {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+}
+
+.label-checkboxborder {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.label-checkboxborder:checked {
+  color: white;
+}
+
+.label-checkboxborder::after {
+  content: url(../images/icons/icons.svg#icon-checkmark);
+  position: absolute;
+  top: 5px;
+  fill: none;
+  background-color: #212121;
+  left: 6px;
+  width: 13px;
+  height: 10px;
+  visibility: hidden;
+}
+
+.regulamin:has(input:checked) span .checkboxborder {
+  fill: var(--lightblue);
+}
+
+.regulamin:has(input:checked) .label-checkboxborder::after {
+  visibility: visible;
+
+  fill: green;
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: var(--lightblue);
+}
+
+.modal-label:has(.modal-input:focus) .modal-icon {
+  fill: var(--lightblue);
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button-send {
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: 0.06rem;
+  line-height: 30px;
   width: 200px;
   height: 50px;
   border-radius: 4px;
-  background-color: var(--lightblue);
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  align-items: center;
-  align-items: center;
-  color: var(--white);
+  color: white;
+  background-color: #2196f3;
   border: none;
-  cursor: pointer;
-}
-.reg-wrapper {
-  display: flex;
-  width: auto;
-  height: auto;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  cursor: pointer;
-}
-
-.regulamin-text {
-  font-size: 14px;
-  font-weight: 400;
-  color: #757575;
-  line-height: 24px;
-  letter-spacing: 3%;
-  vertical-align: top;
-  position: relative;
-  padding-left: 20px;
-}
-
-.button {
-  font-weight: 700;
-}
-
-.checkbox-border {
-  width: 16px;
-  height: 15px;
-  color: #212121;
-  fill: #212121;
-  position: absolute;
-  left: 0px;
-  top: 4px;
-  cursor: pointer;
-}
-
-.reg-checkbox {
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.checkbox::after {
-  content: url(../images/icons/icons.svg#checkbox);
-  width: 16px;
-  height: 15px;
-  fill: var(--white);
-  background-color: var(--lightblue);
-  display: none;
-}
-
-.reg-wrapper input:checked ~ .checkbox::after {
-  display: block;
 }
