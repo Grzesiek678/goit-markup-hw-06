@@ -719,6 +719,7 @@ section {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 40px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon {
@@ -754,6 +755,7 @@ section {
   position: absolute;
   left: 5px;
   top: 3px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-checkboxborder {
@@ -766,26 +768,10 @@ section {
   color: white;
 }
 
-.label-checkboxborder::after {
-  content: url(../images/icons/icons.svg#icon-checkmark);
-  position: absolute;
-  top: 5px;
-  fill: none;
-  background-color: #212121;
-  left: 6px;
-  width: 13px;
-  height: 10px;
-  visibility: hidden;
-}
-
 .regulamin:has(input:checked) span .checkboxborder {
   fill: var(--lightblue);
-}
-
-.regulamin:has(input:checked) .label-checkboxborder::after {
-  visibility: visible;
-
-  fill: green;
+  background-color: var(--lightblue);
+  border-radius: 2px;
 }
 
 .modal-input:focus {
@@ -803,10 +789,76 @@ section {
   align-items: center;
 }
 
+.checkmark {
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  fill: white;
+}
+
+.newsletter {
+  margin-top: 12px;
+}
+
 .modal-button-send {
   cursor: pointer;
   font-weight: 700;
   margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: 0.06rem;
+  line-height: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  color: white;
+  background-color: #2196f3;
+  border: none;
+}
+
+.newsletter-title {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.newsletter-input {
+  padding: 15px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  color: var(--white);
+}
+.newsletter-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  height: 50px;
+}
+
+.newsletter__icon {
+  fill: var(--white);
+  margin-left: 24px;
+}
+
+.newsletter-input:focus {
+  outline: 0;
+  border-color: var(--lightblue);
+}
+
+.newsletter-button {
+  margin-left: 12px;
+  cursor: pointer;
+  font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.06rem;
   line-height: 30px;
