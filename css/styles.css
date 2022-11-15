@@ -749,6 +749,7 @@ section {
   line-height: 146%;
   position: relative;
   cursor: pointer;
+  margin-left: 14px;
 }
 
 .checkboxborder {
