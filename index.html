@@ -403,10 +403,14 @@
               name="email"
               id="newsletter"
               placeholder="E-mail"
-          /></label>
+            />
+          </label>
           <button type="submit" class="newsletter-button">
             Zapisz się
             <svg width="24" height="24" class="newsletter-icon">
+              <use href="./images/icons/icons.svg#icon-send"></use>
+            </svg>
+            <svg width="24" height="24" class="newsletter-icon-support">
               <use href="./images/icons/icons.svg#icon-send"></use>
             </svg>
           </button>
@@ -453,7 +457,11 @@
             ></textarea>
           </label>
           <label class="modal-label regulamin">
-            <input name="checkbox" type="checkbox" class="label-checkboxborder" />
+            <input
+              name="checkbox"
+              type="checkbox"
+              class="label-checkboxborder"
+            />
             <span
               >Oświadczam iż akceptuję
               <a href="" class="regulamin-a">Regulamin</a> i

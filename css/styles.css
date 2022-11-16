@@ -734,6 +734,7 @@ section {
   resize: none;
   height: 120px;
   padding: 12px 16px;
+  margin-bottom: 0;
 }
 
 .regulamin-a {
@@ -751,11 +752,12 @@ section {
   position: relative;
   cursor: pointer;
   margin-left: 14px;
+  margin-top: 20px;
 }
 
 .checkboxborder {
   position: absolute;
-  left: 3px;
+  left: 0;
   top: 3px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -793,7 +795,7 @@ section {
 
 .checkmark {
   position: absolute;
-  left: 5px;
+  left: 2px;
   top: 6px;
   fill: white;
 }
@@ -847,14 +849,6 @@ section {
   height: 50px;
 }
 
-.newsletter-icon {
-  fill: var(--white);
-  margin-left: 24px;
-  position: absolute;
-  top: 13px;
-  right: 28px;
-}
-
 .newsletter-input:focus {
   outline: 0;
   border-color: var(--lightblue);
@@ -874,4 +868,16 @@ section {
   background-color: #2196f3;
   border: none;
   position: relative;
+}
+
+.newsletter-icon {
+  visibility: hidden;
+  fill: var(--white);
+  top: 2px;
+}
+.newsletter-icon-support {
+  position: absolute;
+  fill: var(--white);
+  top: 14px;
+  right: 28px;
 }
